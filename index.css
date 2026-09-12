@@ -20,13 +20,14 @@ body {
     background-size: 96px 96px, cover;
 }
 
-div {
+main {
     display: flex;
     flex-flow: column nowrap;
     place-content: center;
+    place-items: center;
     
     height: 100vh;
-    padding: 0 24px;
+    padding: 0 48px;
 
     background-color: rgb(5, 5, 5);
 }
@@ -35,13 +36,38 @@ h1 {
     background-image: linear-gradient(to right, red, blue);
     font-family: 'Space Grotesk', monospace;
     font-size: 64px;
+    letter-spacing: -3px;
 }
 
 h2 {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 32px
+    font-size: 32px;
+    letter-spacing: -2px;
 }
 
 p {
     font-family: 'Inter', sans-serif;
+}
+
+button {
+    padding: 12px 24px;
+    color: black;
+    background-color: whitesmoke;
+    border: none;
+
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-family: monospace;
+
+    margin: 12px 0;
+}
+
+button:hover {
+    background-color: #e5e5e5;
+}
+
+.choice-container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 12px;
 }
