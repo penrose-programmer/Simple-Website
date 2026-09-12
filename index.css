@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    place-content: center;
+    align-items: center;
+
+    height: 100vh;
+    margin: 0 480px;
+
+    text-align: center;
+
+    color: white;
+    background: 
+        repeating-conic-gradient(black 0% 25%, grey 0% 50%),
+        linear-gradient(15deg, rgba(255, 0, 0, 0.8) 0%, rgb(15, 15, 25) 33% 66%, rgba(0, 0, 255, 0.8) 100%);
+    background-blend-mode: overlay;
+    background-size: 96px 96px, cover;
+}
+
+div {
+    display: flex;
+    flex-flow: column nowrap;
+    place-content: center;
+    
+    height: 100vh;
+    padding: 0 24px;
+
+    background-color: rgb(5, 5, 5);
+}
+
+h1 {
+    background-image: linear-gradient(to right, red, blue);
+    font-family: 'Space Grotesk', monospace;
+    font-size: 64px;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 32px
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+}
