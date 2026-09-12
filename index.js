@@ -14,6 +14,14 @@ if (window.location.pathname === '/choice.html' && localStorage.getItem('userDis
     window.location = '/';
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    if (!localStorage.getItem("hasVisited")) {
+        localStorage.setItem("userDisappointment", Disappointment.UNSET)
+    }
+
+    localStorage.setItem("hasVisited", "true")
+});
+
 function setHomePage() {
     if (localStorage.getItem('userDisappointment') === Disappointment.UNSET) {
         homeButton.textContent = "Wanna see somethin' cool? 😎"
