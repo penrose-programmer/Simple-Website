@@ -6,12 +6,15 @@ const Disappointment = Object.freeze ({
     CRAB: 'CRAB'
 });
 
-if (window.location.pathname === '/') {
+
+const URL = (location.hostname === "localhost" || location.hostname === "127.0.0.1") ? "http://localhost:5500" : "https://penrose-programmer.github.io/Simple-Website"
+
+if (window.location.href === `${URL}/`) {
     setHomePage();
 }
 
 if (window.location.pathname === '/choice.html' && localStorage.getItem('userDisappointment') === Disappointment.CRAB) {
-    window.location = '/';
+    window.location = `${URL}/`;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -37,7 +40,7 @@ function setHomePage() {
 
 function playGame() {
     if (localStorage.getItem('userDisappointment') === Disappointment.UNSET || localStorage.getItem('userDisappointment') === Disappointment.DISAPPOINTED) {
-        window.location = '/choice.html';
+        window.location = `${URL}/choice.html`;
     }
     else if (localStorage.getItem('userDisappointment') === Disappointment.CRAB) {
         window.location = 'https://www.youtube.com/watch?v=LDU_Txk06tM&t=58s';
@@ -45,7 +48,7 @@ function playGame() {
 }
 
 function returnHome() {
-    window.location = '/';
+    window.location = `${URL}/`;
     localStorage.setItem("userDisappointment", Disappointment.DISAPPOINTED);
 }
 
